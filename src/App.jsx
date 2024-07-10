@@ -11,6 +11,7 @@ import Charts from './Pages/Charts'
 import Calendar from './Pages/Calendar'
 import Creditcards from './Pages/Creditcards'
 import Debts from './Pages/Debts'
+import Navbar from './Components/NavBar'
 
 function App() {
 
@@ -22,7 +23,10 @@ function App() {
 
   return (
   <BrowserRouter>
+  <main className='h-screen flex '>
     <SideBar/>
+    <main className='flex flex-col w-full'>
+    <Navbar/>
       <Routes>
         <Route path="/OverView" element={<OverView/>} />
         <Route path="/Transactions" element={<Transactions/>} />
@@ -34,6 +38,8 @@ function App() {
         <Route path="/Debts" element={<Debts/>} />
         <Route path="/Creditcards" element={<Creditcards/>} />
       </Routes>
+      </main>
+  </main>
   </BrowserRouter>
   )
 }
