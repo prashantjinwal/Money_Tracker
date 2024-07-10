@@ -1,4 +1,5 @@
 // import { XMarkIcon } from "@heroicons/react/16/solid";
+import { Link } from "react-router-dom";
 import Svgs from "../assets/SvgMap";
 import logo from "/pictures/app_icon_64.png"
 
@@ -20,7 +21,7 @@ export default function SideBar(){
 
                     return (
                     <li className="mt-1" key={btn.id}>
-                        <button className={btnStyle}>{btn.text}</button>
+                        <Link key={btn.name} to={btn.href} ><button className={btnStyle}>{btn.text}</button></Link>
                     </li>
                     );
 
@@ -30,7 +31,7 @@ export default function SideBar(){
             </ul>
 
             <div>
-                {/* <button>{XMarkIcon}</button> */}
+                
             </div>
         </aside>
     );
