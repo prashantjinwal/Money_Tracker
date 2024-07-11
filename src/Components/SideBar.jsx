@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import Svgs from "../assets/SvgMap";
 import logo from "/pictures/app_icon_64.png"
 
-export default function SideBar(){
+
+
+export default function SideBar({ onselect }){
 
     
     return (
@@ -21,7 +23,7 @@ export default function SideBar(){
 
                     return (
                     <li className="mt-1" key={btn.id}>
-                        <Link key={btn.name} to={btn.href} ><button className={btnStyle}>{btn.text}</button></Link>
+                        <Link key={btn.name} to={btn.href} ><button onClick={() => onselect(btn.text)} className={btnStyle}>{btn.text}</button></Link>
                     </li>
                     );
 

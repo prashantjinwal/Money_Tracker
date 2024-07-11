@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import SideBar from './Components/SideBar'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -13,20 +13,33 @@ import Creditcards from './Pages/Creditcards'
 import Debts from './Pages/Debts'
 import Navbar from './Components/NavBar'
 
+
 function App() {
 
-  // const [SelectedNav, SetSelectedNav] = useState({
-  //   selectedID: undefined,
+  const [selectedTitle, setselectedTitle] = useState(
+    {
+      selectedID:"OverView",
+    
+    }
+  )
+  
+  function handleSelect(text){
+    setselectedTitle((prev)=>{
+      return{
+        ...prev,
+        selectedID:text,
+      }
+    })
+  
+  }
 
-  // })
-
-
+  
   return (
   <BrowserRouter>
   <main className='h-screen flex '>
-    <SideBar/>
+    <SideBar onselect={handleSelect}  />
     <main className='flex flex-col w-full'>
-    <Navbar/>
+    <Navbar Header={selectedTitle} />
       <Routes>
         <Route path="/OverView" element={<OverView/>} />
         <Route path="/Transactions" element={<Transactions/>} />

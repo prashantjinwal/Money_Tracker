@@ -1,11 +1,11 @@
-export default function Navbar(){
+export default function Navbar({Header}){
     return (
         <nav className="mt-0 w-full bg-[#323031] px-6 ">
 
             <header className="py-[1.40em] flex justify-between">
 
                 <section>
-                    <p className="text-white font-semibold text-lg">lorem</p>
+                    <p className="text-white font-semibold text-lg">{Header.selectedID}</p>
                 </section>
 
                 <button>
