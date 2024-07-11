@@ -19,9 +19,9 @@ function App() {
   const [selectedTitle, setselectedTitle] = useState(
     {
       selectedID:"OverView",
-    
     }
   )
+  const[ btnSlate, setbtnSlate] = useState(true);
   
   function handleSelect(text){
     setselectedTitle((prev)=>{
@@ -33,13 +33,20 @@ function App() {
   
   }
 
+  function handleBtn(){
+    if (btnSlate === true) {
+      setbtnSlate(false)
+    }else{
+      setbtnSlate(true)
+    }
+  }
   
   return (
   <BrowserRouter>
   <main className='h-screen flex '>
-    <SideBar onselect={handleSelect} selectedBarBtn={selectedTitle.selectedID}  />
+   {btnSlate ? <SideBar onselect={handleSelect} selectedBarBtn={selectedTitle.selectedID} />  : undefined}
     <main className='flex flex-col w-full'>
-    <Navbar Header={selectedTitle} />
+    <Navbar Header={selectedTitle} onbtnClick={handleBtn} />
       <Routes>
         <Route path="/" element={<OverView/>} />
         <Route path="/Transactions" element={<Transactions/>} />
