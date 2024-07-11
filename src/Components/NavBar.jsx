@@ -4,7 +4,8 @@ export default function Navbar({Header}){
 
             <header className="py-[1.40em] flex justify-between">
 
-                <section>
+                <section className="flex gap-2 ">
+                    <button className="text-white font-bold border-2 border-emerald-50">H</button>
                     <p className="text-white font-semibold text-lg">{Header.selectedID}</p>
                 </section>
 

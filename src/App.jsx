@@ -37,11 +37,11 @@ function App() {
   return (
   <BrowserRouter>
   <main className='h-screen flex '>
-    <SideBar onselect={handleSelect}  />
+    <SideBar onselect={handleSelect} selectedBarBtn={selectedTitle.selectedID}  />
     <main className='flex flex-col w-full'>
     <Navbar Header={selectedTitle} />
       <Routes>
-        <Route path="/OverView" element={<OverView/>} />
+        <Route path="/" element={<OverView/>} />
         <Route path="/Transactions" element={<Transactions/>} />
         <Route path="/Scheduledtransactions" element={<Scheduledtransactions />} />
         <Route path="/Accounts" element={<Accounts/>} />

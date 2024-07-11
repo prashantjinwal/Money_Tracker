@@ -1,7 +1,8 @@
 {
-  "name": "allhooks",
+  "name": "moneytracker",
   "private": true,
   "version": "0.0.0",
+  "homepage": "Overview",
   "type": "module",
   "scripts": {
     "dev": "vite",

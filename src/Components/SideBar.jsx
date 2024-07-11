@@ -1,11 +1,10 @@
-// import { XMarkIcon } from "@heroicons/react/16/solid";
 import { Link } from "react-router-dom";
 import Svgs from "../assets/SvgMap";
 import logo from "/pictures/app_icon_64.png"
 
 
 
-export default function SideBar({ onselect }){
+export default function SideBar({ onselect, selectedBarBtn }){
 
     
     return (
@@ -19,7 +18,13 @@ export default function SideBar({ onselect }){
             <ul className="mt-2">
 
                 {Svgs.map((btn)=>{
-                    let btnStyle = "py-3 px-4 text-left w-full  text-white hover:bg-black";
+                    let btnStyle = "py-3 px-4 text-left w-full  hover:bg-black";
+
+                    if (btn.text === selectedBarBtn){
+                        btnStyle += " text-[#0077b6] font-semibold"
+                    }else{
+                        btnStyle += " text-white  "
+                    }
 
                     return (
                     <li className="mt-1" key={btn.id}>

@@ -15,7 +15,7 @@ const Svgs = [
         id:1,
         text:"OverView",
         name:"OverView",
-        href:"/OverView",
+        href:"/",
         // iconVisble:OverView,
     },
     {
