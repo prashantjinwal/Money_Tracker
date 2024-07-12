@@ -37,9 +37,7 @@ export default function SideBar({ onselect, selectedBarBtn }){
                 
             </ul>
 
-            <div>
-                
-            </div>
+            
         </aside>
     );
 } 
