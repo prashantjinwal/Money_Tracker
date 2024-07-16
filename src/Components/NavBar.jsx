@@ -1,6 +1,8 @@
 import { EllipsisVertical, Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 
+
+
 export default function Navbar({Header, onbtnClick}){
 
         const [isOpen, setIsOpen] = useState(false);
@@ -30,9 +32,11 @@ export default function Navbar({Header, onbtnClick}){
 
             <header className="py-[1.1em] flex justify-between">
 
-                <section className="flex gap-4 ">
-                    <button onClick={onbtnClick} className="text-white font-bold border-2 border-emerald-50"><Menu /></button>
-                    <p className="text-white font-semibold text-lg">{Header.selectedID}</p>
+                <section className="flex gap-4 items-center">
+                    
+                        <button onClick={onbtnClick} className="text-white font-bold "><Menu  /></button>
+                        <p className="text-white font-semibold text-lg">{Header.selectedID}</p>
+
                 </section>
 
             <div className="relative">
