@@ -5,10 +5,19 @@ import logo from "/pictures/app_icon_64.png"
 
 
 export default function SideBar({ onselect, selectedBarBtn }){
+    // let asideClass = "w-1/5 h-[100vh] bg-[#323031] "
 
+    // useEffect(()=>{
+    //     let width = window.innerWidth;
+    // if(width < 1200){
+    //     asideClass += " "
+    // }
+    // }, [setIsOpen])
     
+    
+
     return (
-        <aside className="w-1/5 h-[100vh] bg-[#323031]">
+        <aside className={" lg:w-1/5 h-[100vh] bg-[#323031] w-11/12  "} >
             <div className="py-4 border-stone-500 border-b-2 flex gap-4 items-center px-5 ">
                 <img className="w-[2.2em]" src={logo} alt="logo" />
                 <h2 className="text-white font-semibold text-lg">Expensio</h2>
