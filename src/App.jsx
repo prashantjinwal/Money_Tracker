@@ -43,6 +43,7 @@ function App() {
   }
   
   return (
+    
   <BrowserRouter>
   <main className='h-screen flex '>
    {btnSlate ? <SideBar onbtnClick={handleBtn} onselect={handleSelect} selectedBarBtn={selectedTitle.selectedID} />  : undefined}
