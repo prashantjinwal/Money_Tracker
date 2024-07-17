@@ -39,6 +39,7 @@ function App() {
     }else{
       setbtnSlate(true)
     }
+    
   }
   
   return (

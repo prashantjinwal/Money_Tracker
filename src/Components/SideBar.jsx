@@ -1,14 +1,21 @@
 import { Link } from "react-router-dom";
 import Svgs from "../assets/SvgMap";
 import logo from "/pictures/app_icon_64.png"
-// import { Menu } from "lucide-react";
 import { Plus } from "lucide-react";
+import { useEffect } from "react";
 
 
 export default function SideBar({ onselect, selectedBarBtn, onbtnClick }){
 
+    function selectAndFalseSideBar(){
+        let width = window.innerWidth
+        if(width < 1024){
+            onbtnClick()
+        }
+    }
+
     return (
-        <aside className=" lg:w-1/5 h-[100vh] bg-[#323031] w-9/12 lg:static absolute z-50" >
+        <aside className=" lg:w-1/5 h-[100vh] bg-[#323031] w-9/12 lg:static absolute z-50  " >
             <div className="py-4 border-stone-500 border-b-2 flex gap-4 items-center px-5 justify-between">
                 <div className="flex gap-4 items-center">
                     <img className="w-[2.2em]" src={logo} alt="logo" />
@@ -34,7 +41,7 @@ export default function SideBar({ onselect, selectedBarBtn, onbtnClick }){
                     }
 
                     return (
-                    <li className="mt-1" key={btn.id}>
+                    <li className="mt-1" key={btn.id}onClick={selectAndFalseSideBar} >
                         <Link key={btn.name} to={btn.href} ><button onClick={() => onselect(btn.text)} className={btnStyle}>{btn.text}</button></Link>
                     </li>
                     );
