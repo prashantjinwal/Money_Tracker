@@ -1,8 +1,16 @@
-import {useState} from "react"
+import {useEffect, useState} from "react"
+import axios from "axios"
 
 const OverView = function  (){
 
- const [test, settest] = useState();
+ const [test, settest] = useState([]);
+    useEffect(()=>{
+        axios.get('/api/test')
+        .then((Response)=>{settest(Response.data)})
+        .catch((err)=>{
+            console.error(err);
+        },[])
+    })
 
     return (
         <div id="screen">
@@ -10,11 +18,11 @@ const OverView = function  (){
             <h2>TEST : {test.length}</h2>
             <p>
                 {
-                    test.map((T)=>{
+                    test.map((T)=>(
                         <div key={T.id} >
                             <p>{T.content}</p>
                         </div>
-                    })
+                    ))
                 }
             </p>
 

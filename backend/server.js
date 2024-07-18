@@ -2,7 +2,7 @@ import express from "express"
 
 const app = express()
 
-app.get( "/test" ,(req, res)=>{
+app.get( "/api/test" ,(req, res)=>{
 
     const test = [
         {
