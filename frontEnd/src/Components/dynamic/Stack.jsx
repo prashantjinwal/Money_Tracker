@@ -3,7 +3,7 @@ export default function Stack ({StackHeaderName, StackValue}){
     let valueClass = 'font-bold text-2xl my-2 text-green'
 
     if (StackHeaderName === 'Expenses') {
-        valueClass += ' text-red-500'
+        valueClass += ' text-[#c1121f]'
     }if (StackHeaderName === 'Income') {
         valueClass += ' text-green-500'
     } else {
