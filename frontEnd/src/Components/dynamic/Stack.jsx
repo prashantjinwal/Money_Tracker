@@ -16,5 +16,7 @@ export default function Stack ({StackHeaderName, StackValue}){
             <p className="text-xl ">{StackHeaderName}</p>
             <p className={valueClass}>{StackValue}</p>
         </div>
+
+        
     )
 }
