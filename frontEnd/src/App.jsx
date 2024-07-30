@@ -45,8 +45,8 @@ function App() {
   return (
     
   <BrowserRouter>
-  <main className='h-screen flex '>
-   {btnSlate ? <SideBar onbtnClick={handleBtn} onselect={handleSelect} selectedBarBtn={selectedTitle.selectedID} />  : undefined}
+  <main className='h-screen flex'>
+    {btnSlate ? <nav className='lg:w-1/5 h-screen bg-[#323031] w-9/12 lg:static fixed z-50 overflow-y-auto'> <SideBar onbtnClick={handleBtn} onselect={handleSelect} selectedBarBtn={selectedTitle.selectedID} />  </nav>: undefined}
     <main className='flex flex-col w-full'>
     <Navbar Header={selectedTitle} onbtnClick={handleBtn} />
       <Routes>

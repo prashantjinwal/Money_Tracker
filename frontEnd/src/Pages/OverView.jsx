@@ -1,7 +1,8 @@
-import {useEffect, useState} from "react"
+// import {useEffect, useState} from "react"
 import axios from "axios"
 import Stack from "../Components/dynamic/Stack"
 import AccountStack from "../Components/dynamic/AccountStack"
+import MonthlyBarChart from "../graphs/Monthy"
 
 const OverView = function  (){
 
@@ -15,7 +16,7 @@ const OverView = function  (){
 //     })
 
     return (
-        <div  className="bg-black w-full h-full text-white md:p-[3em]  p-[1.5em]">
+        <div  className="bg-black w-full lg:ml-1/5  text-white md:p-[3em]  p-[1.5em]">
             {/* <h2>OverView</h2>
             <h2>TEST : {test.length}</h2>
             <p>
@@ -38,6 +39,10 @@ const OverView = function  (){
             <Stack StackHeaderName={"Balance"} StackValue={25430}/>
         </div>
 
+        <div className=" w-3/5 p-3 bg-[#323031]  mt-[2em] shadow-md">
+            <MonthlyBarChart/>
+        </div>
+        
 
         </div>
     )

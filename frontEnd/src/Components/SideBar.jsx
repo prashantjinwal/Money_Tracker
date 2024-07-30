@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Svgs from "../assets/SvgMap";
 import logo from "/pictures/app_icon_64.png"
 import { Plus } from "lucide-react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 
 export default function SideBar({ onselect, selectedBarBtn, onbtnClick }){
@@ -15,7 +15,9 @@ export default function SideBar({ onselect, selectedBarBtn, onbtnClick }){
     }
 
     return (
-        <aside className=" lg:w-1/5 h-[100vh] bg-[#323031] w-9/12 lg:static absolute z-50  " >
+        // <aside className=" lg:w-1/5 h-screen bg-[#323031] w-9/12 lg:static fixed z-50 overflow-hidden" >
+        
+        <>
             <div className="py-4 border-stone-500 border-b-2 flex gap-4 items-center px-5 justify-between">
                 <div className="flex gap-4 items-center">
                     <img className="w-[2.2em]" src={logo} alt="logo" />
@@ -51,7 +53,8 @@ export default function SideBar({ onselect, selectedBarBtn, onbtnClick }){
                 
             </ul>
 
-            
-        </aside>
+                 {/* </aside> */}
+            </>
+       
     );
 } 
